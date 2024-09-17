@@ -3,6 +3,10 @@ description: A showcase of work used to highlight a special set of skills!
 theme: just-the-docs
 
 url: https://sourkrouse.github.io/ePortfolio/
+color_scheme: dark
 
 aux_links:
-  Template Repository: https://github.com/sourkrouse/ePortfolio/tree/master
+  Weight and See App Repository: https://github.com/sourkrouse/ePortfolio/tree/master
+  App Screenshots: https://github.com/sourkrouse/ePortfolio/blob/main/WeightTracker_Screenshots_BEFORE.docx
+  How to View the app without an Emulator: https://github.com/sourkrouse/ePortfolio/blob/main/WeightTrackerApp/APKOnline_Extension_Instructions.docx
+  
