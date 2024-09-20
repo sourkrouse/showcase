@@ -1,6 +1,6 @@
 ---
 title: Home
-layout: home
+layout: default
 ---
 
 # ePortfolio
@@ -13,12 +13,10 @@ There are 2 repositories where my work is currently stored.
 
 These repositories will be built out to display my work in a more organized fashion.
 
-
-
--[Weight Tracker Code]
--[Code Review Video]
--[App Screenshots]
--[How to View the app without an Emulator]
+- [Weight Tracker Code]
+- [Code Review Video]
+- [App Screenshots]
+- [How to View the app without an Emulator]
 
 
 ----
