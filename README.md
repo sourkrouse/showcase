@@ -10,6 +10,10 @@ These repositories will be built out to display my work in a more organized fash
 
 <a href="https://github.com/sourkrouse/ePortfolio/tree/master/WeightTracker">GO TO Weight Tracker Code</a>
 
-[GO TO Code Review Video]
+[Code Review Video]
+[App Screenshots]
+[How to View the app without an Emulator]
 
-[GO TO Code Review Video]: https://youtu.be/YTIxfNiG-sw
+[Code Review Video]: https://youtu.be/YTIxfNiG-sw
+[App Screenshots]: https://github.com/sourkrouse/ePortfolio/blob/main/WeightTracker_Screenshots_BEFORE.docx
+[How to View the app without an Emulator]: https://github.com/sourkrouse/ePortfolio/blob/main/WeightTrackerApp/APKOnline_Extension_Instructions.docx
