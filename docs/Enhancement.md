@@ -1,6 +1,6 @@
 ---
 title: List of Enhancements
-nav_order: 2
+layout: default
 ---
 
 # List of Enhancements
