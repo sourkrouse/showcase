@@ -4,6 +4,7 @@ theme: just-the-docs
 
 url: https://sourkrouse.github.io/ePortfolio/
 color_scheme: dark
+logo: "docs/assets/W&Slogo.PNG"
 
 aux_links:
   Weight and See App Repository: https://github.com/sourkrouse/ePortfolio/tree/master
