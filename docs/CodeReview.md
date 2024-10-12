@@ -1,6 +1,6 @@
 ---
 title: Code Review Video
-nav_order: 4
+layout: default
 ---
 # Code Review Video
 ### The video is too large to house on GitHub so a link to the YouTube location is found by clicking the preview.
