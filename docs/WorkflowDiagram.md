@@ -1,6 +1,6 @@
 ---
 title: Workflow and Flowchart Diagrams
-nav_order: 3
+layout: default
 ---
 # Workflow Diagram for Weight and See Mobile Application
 ### The image below is a diagram representing the workflow of the application with the proposed enhancements. The diagram was revised over time to account for time constraints.
