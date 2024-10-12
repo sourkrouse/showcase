@@ -1,6 +1,6 @@
 ---
 title: Enhancement Use Cases
-nav_order: 4
+layout: default
 ---
 # Enhancement Use Cases
 ### The use cases below represent the enhancement requirements for the Weight and See mobile Application
