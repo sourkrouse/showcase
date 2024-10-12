@@ -1,3 +1,8 @@
+---
+title: List of Enhancements
+nav_order: 2
+---
+
 # List of Enhancements
 ## The following is a summary of the enhancements completed in the Weight and See application.
 
