@@ -1,3 +1,7 @@
+---
+title: Screenshots - Before and After
+layout: default
+---
 # These Screenshots provide visuals for the before and after
 ### BEFORE - The original application only had a home screen, login screen, and registration screen, with no functionality added.
 
