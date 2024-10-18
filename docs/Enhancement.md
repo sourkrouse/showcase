@@ -26,3 +26,5 @@ layout: default
 - Created multiple data models for Register and Weights tables
 - Created Database Access Objects for the connections from XML/User entry to database
 - Developed a data schema diagram to highlight the relationships
+
+![Database Schema](assets/Data_Schema.PNG)
