@@ -16,7 +16,7 @@ SNHU Capstone Project: CS499-12473-M01
     - [Project Summary](#project-summary)
     - [Weight and See Mobile Application Summary](#weight-and-see-mobile-application-summary)
 - [Enhancement Narratives](#enhancement-narratives)
-    - [Artifact Selection](#artifact-selection)
+    - [Artifact Description](#artifact-description)
     - [Reason for Artifact Selection](#reason-for-artifact-selection)
     - [Course Outcome Analysis](#course-outcome-analysis)
     - [Enhancement Process Reflection](#enhancement-process-reflection)
@@ -38,6 +38,8 @@ For the **Database category**, I used a Room Library database that uses internal
 
 ### Weight and See Mobile Application Summary
 I chose the same artifact across all three categories, using this mobile application to produce a fully polished, quality product. Developing in Android Studio and using Java code, with an XML front end, it is remarkably similar to the ASP.NET/C# with HTML front end applications I build in my daily role. The application includes a login/registration module, an option to add a new weight to your profile, and a display of the last 5 weights entered in a dashboard. Although there were several challenges throughout the project, the biggest challenge was being mindful of each potential interaction the user could have with each screen, including device orientation. A mobile application includes a manifest file that maps out each step of the workflow and will only allow those steps to be configured in the application. Therefore, a user can only go from the login page to the weight dashboard if the manifest file decrees it. One key difference between a mobile application and a static HTML application is that each time the device is re-oriented, or a new method is introduced into the workflow, the activities “OnCreate” method is automatically run to generate the new view. This means that the app can quickly crash if certain tasks are not separated by execute threads or callable threads. In the code example below, the RunOnThread is an object created in the Main Activity but uses the ExecutorService function to run the database call which pulls the user profile ID into a variable. It returns the profile ID of the user.
+
+[[Back to Top]](#section-links)
 
 '''
 
@@ -125,15 +127,20 @@ Utilizing all the available resources for troubleshooting is an important qualit
 
 Building this project helped to solidify my career goal decision in software development or engineering. I enjoyed learning the fundamentals of a mobile application and hope to apply those skills in my current and future positions. 
 
+[[Back to Top]](#section-links)
 
 # Enahancement Narratives
 ### Artifact Description
 
 The artifact chosen for this project is a mobile application titled Weight and See, which was first developed in the CS 360: Mobile Architecture and Programming course. The artifact will be used for all three categories. The course was originally completed in Feb/Mar 2022 and included an initial design as well as some placeholders for extended functionality. The application was built using the Android Studio as the IDE and the languages used are java and XML. The application includes functionality to login or create an account, then displays a list of weights by date that have been entered to show progress towards a goal weight. The app uses the Room Library which functions as an Internal database utilizing SQLite. Although these enhancements will focus on the basic shell and database CRUD methods, the application was built with the intention to expand that functionality in later phases.
 
+[[Back to Top]](#section-links)
+
 ### Reason for Artifact Selection
 
 This mobile app was selected for two main reasons; mobile development is an appealing career avenue, and the languages used are similar but with enough gaps to learn some new skills. The original purpose of the Weight and See app was aimed towards tracking a personal weight loss journey, however, there are other plans to reconfigure the application to use as a Material Load Weight Tracking app for a trucking hauling business. The opportunity to develop a piece of work that can be showcased, as well as reused in a realistic scenario, plus learning a new skill was highly appealing. Java and XML are very similar languages to C# and HTML, which makes a smooth transition simple. However, there is value in applying the experience I have understanding modular, object-oriented coding to learn a new style of coding. The experience made me think outside the box and look at the core structure of the application to understand where certain pieces to fit. For example, mobile applications developed in Android Studio separate style features in the resource section which encourages a relative link back to a single variable, versus absolute styles hardcoded into a CSS file. These variations are easy to pick up and was an excellent choice to begin branching out skills.
+
+[[Back to Top]](#section-links)
 
 # COURSE OUTCOME ANALYSIS
 *Outcome 1* - **Design, develop, and deliver professional-quality oral, written, and visual communications that are coherent, technically sound, and appropriately adapted to specific audiences and contexts.** I have completed all the deliverables as specified in the enhancement plan. Those include a workflow, a Class Diagram, User Stories with Diagram, Test Case Scenarios, and the Database Schema. Additionally, I wrote instructions on how to view the mobile app without an emulator and documented some before and after screenshots. The code includes an info comment block at the top of each page that summarizes the date of the last update, the enhancements made, and description. Each method has a short comment to describe what it is doing. All these deliverables, the comments, the instructions, and the screenshots provide evidence to support the enhancement design and plan proposed, as well as be helpful for anyone viewing the application. From developers looking for ideas, to career recruiters looking for candidates, the diverse showcase of work will satisfy needs for several roles. 
@@ -146,6 +153,8 @@ This mobile app was selected for two main reasons; mobile development is an appe
 
 *Outcome 5* - **Develop a security mindset that anticipates adversarial exploits in software architecture and designs to expose potential vulnerabilities, mitigate design flaws, and ensure privacy and enhanced security of data and resources.** The application is secured by a username and password module that displays information related to the user by accessing data via a user ID. The username and password data are kept secure in the database by developing methods that keep the data private as each function is called. Additionally, encryption of the fields is an option, but not yet applied. The use of back buttons and links are organized in a way that will not allow a user to navigate to a screen without accessing the login page first.
 
+[[Back to Top]](#section-links)
+
 
 # ENHANCEMENT PROCESS REFLECTION
 ### Category One: Software Design & Engineering
@@ -153,10 +162,14 @@ This mobile app was selected for two main reasons; mobile development is an appe
 Since the same artifact will be used throughout the course for all categories, the enhancement progress is intertwined between all 3 categories of the course. For example, design documents have been developed to support the Software Development Life Cycle, database functionality has been added, colors are considered, and code functions that can be modular or reusable are favored. All these tasks contribute to a software design/engineering category. Strategic and critical thinking is involved to re-engineer an existing application that will build on stale functionality. I am confident in the structure I created to make the application organized and easy to follow.  By creating meaningful classes with appropriate arguments that will be called throughout the project securely and efficiently shows evidence of being able to structure an application in a logical way that is transferrable to other developers. I am confident in my abilities to analyze code for potential security risks. I created some validation functions and unit tests to ensure the entered data matches the requirements and checks for SQL injection. Additionally, any arguments passed need to be done in a way that will not allow vulnerabilities. For example, when passing the User ID from screen to screen, the code includes checks for potential hacking risks. If someone can update a user ID in the backend code, like a query string or hidden field, it will allow any user to change the ID to any account. This field is secure and private. 
 Along the development path, challenges were encountered. It was important to use the resources available to me to troubleshoot problem code or research a function that I am not familiar with. This occurred often when learning how to apply the Room Library database code to my methods. I have a comfortable confidence in my ability to build ASP.NET MVC applications with a SQL Database back-end. This knowledge was helpful when applying database functionality to mobile applications in Java. After many years of experience growing in the software development field, knowing how to apply problem solving skills to the tricky nuisances is paramount. For example, when I have a piece of code that is not working, I will comment out everything and add code in line by line until I understand the issue. As I was working through the enhancements, I had some PC slowness issues that required me to re-evaluate the proposed requirements. Providing realistic deadlines and then re-assessing along the way are characteristics I have learned to develop with experience. One of my better strengths is being able to size a project with the amount of work needed within the deadline available, while also setting realistic expectations of the final product. By reducing the number of enhancements in my initial project proposal, I will be able to deliver a clean, workable solution that still showcases my skills as a software developer.  
 
+[[Back to Top]](#section-links)
+
 ### Category Two: Algorithms and Data Sets
 
 Once the design preparations are completed and the basic shell is created, focus is now geared towards writing code that uses the full capability of the Java language and algorithmic practices. Screens are represented as a single class, with breakout for more complex functionality to use fragment classes or view models. This helps keep the code catalogued while also taking advantage of any opportunity to use modularized functions. For example, regarding validation, functions that verify data types and size are reusable throughout the screens. These functions also include unit tests to ensure the integrity of the data is accurate. I made use of looping or conditional statements whenever possible, particularly when checking database results. Another example of this is the use of a switch statement to run different menu options based on the selection made on that screen. Arrays and looping are required to display a list of recordset results from the database. Efficiency is gained during the login process by creating an object using a custom “RunOnThread” class. This class will check if the username password combination passed matches an existing entry and returns the profile record. The class is also used in other areas to pull the profile first and last name to display on the dashboard. I made use of a Recycler View that works with the recordset of weight objects returned by the user ID. The recycler view will run through the position of each object returned and display the data is an adapter file.
 Some challenges related to this category include the use of an “Intent” action and passing an argument between screens. The Intent action is the Java/Mobile application version of switching views and it is not a topic that I am familiar with. Along with the Intent action, Java provides an ability to add extra values to the Instance state. Setting and retrieving these values have been somewhat difficult because they must be done at the correct thread level. I worked through some debugging exercises to figure out when the values were being set, when they were dropped, and locating the appropriate error. I am more familiar with query strings and being able to view those values in a browser tool. Mobile Applications do not operate the same way so there was a learning curve in this area.
+
+[[Back to Top]](#section-links)
 
 ### Category Three: Databases
 
@@ -164,5 +177,5 @@ The database enhancement included adding a back-end database solution from the g
 Although the database solution is setup in a way that matches my experience and skills, there were some key challenges when attempting to write functional algorithms and methods to connect the data to user entries and dashboards. This mobile application style uses View Models, which is common in modular style applications, but there were some new functions to learn such as Recycler Views and Fragment sections. These functions are basically a different way of calling a small set of data into a frameset of the screen, but the setup is a new concept that I had to research. The learning curve is related to getting the list object pulled from a database to display in a Recycler View in XML format. This is different from an HTML based MVC project where razor code can be applied to the view.
 
 
-
+[[Back to Top]](#section-links)
 
