@@ -18,11 +18,15 @@ SNHU Capstone Project: CS499-12473-M01
 - Hold down the CTRL key to open in a new window (CMD for MAC).
 - [Original Weight Tracker](https://github.com/sourkrouse/AndroidStudio/tree/main/OriginalWeightTracker/WeightTracker/app/src/main/java/com/zybooks/weighttracker)
 
+
 ### ENHANCED Weight and See Project Files
 - This link will take you to the repository named "ePortfolio", under the "sourkrouse" GitHub site.
 - Hold down the CTRL key to open in a new window (CMD for MAC).
+- All files were commited to the MASTER branch.
 - To find source files, navigate to folders - WeightTracker/app/src/main/ then java/com/zybooks/weighttracker
 - [ENHANCED Weight Tracker Files](https://github.com/sourkrouse/ePortfolio/tree/master/WeightTracker)
+- - To view a history of commits, use this link. Clicking on each commit will display a side-by-side code review of each page.
+- [History of Commits](https://github.com/sourkrouse/ePortfolio/commits/master/WeightTracker)
 
 # Section Links
 - [Professional Assessment](#professional-assessment)
