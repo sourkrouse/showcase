@@ -11,6 +11,19 @@ SNHU Capstone Project: CS499-12473-M01
 
 10/20/2024
 
+# Project Files
+### Original Weight and See Project files (before enhancements)
+- This link will take you to the project folder, navigating directly to the source files.
+- These are located in a seperate repository called "AndroidStudio", under my "sourkrouse" GitHub site.
+- Hold down the CTRL key to open in a new window (CMD for MAC).
+- [Original Weight Tracker](https://github.com/sourkrouse/AndroidStudio/tree/main/OriginalWeightTracker/WeightTracker/app/src/main/java/com/zybooks/weighttracker)
+
+### ENHANCED Weight and See Project Files
+- This link will take you to the repository named "ePortfolio", under the "sourkrouse" GitHub site.
+- Hold down the CTRL key to open in a new window (CMD for MAC).
+- To find source files, navigate to folders - WeightTracker/app/src/main/ then java/com/zybooks/weighttracker
+- [ENHANCED Weight Tracker Files](https://github.com/sourkrouse/ePortfolio/tree/master/WeightTracker)
+
 # Section Links
 - [Professional Assessment](#professional-assessment)
     - [Project Summary](#project-summary)
@@ -28,7 +41,7 @@ SNHU Capstone Project: CS499-12473-M01
 ### Project Summary
 The Capstone course of the B.S. in Computer Science degree plan has been a fantastic way to pull together all the skills I have learned throughout the program journey. This journey started for me in early 2014 as I have been blessed to take advantage of the tuition assistance benefits at Truist Bank, where I have been employed since 2001. For this final project, I chose to enhance a mobile application I built in the CS 360: Mobile Architecture and Programming course for all three categories of the course. The application was built using the Android Studio as the IDE and the languages used are java and XML. There are two reasons behind this selection; because I find mobile development interesting and because it closely aligns with my current position and skills. Click the [Summary of the Enhancements](docs/Enhancement) in my online ePortfolio site on GitHub for a list of enhancements completed in the application. The setup of the ePortfolio is organized in a way that **communications to stakeholders** are housed in a unique location. The home page documents the skills and process used in the project and the sidebar includes links to supporting information.
 
-There were several courses that I was able to fall back on to assist in the completion of the different pieces of the project. For the **Software Design and Engineering category**, the enhancement design included building a set of blueprints outlining the typical communications needed in a software development project. These documents include [user stories](docs/UseCases), [workflow, and flowchart diagrams](docs/WorkflowDiagram), and are helpful when **collaborating with a team** that includes Project Managers, Developers, Business Analysts, and Architects. Additionally, I wrote instructions on how to [view the mobile app without an emulator](docs/ExtensionInstructions) and documented some [before and after screenshots](docs/Screenshots). The Software Development Lifecycle course taught me the importance of completing development steps in accordance with industry standards. For example, I used GIT Bash source control with my GitHub repository to record commits along the project. This is a great resource to review changes made to the code at different points of the project. Click here to review the history of commits made in the project stored in GitHub. The Software Test, Automation and QA course helped in the design of some unit tests I built to test the validation functions I wrote to ensure the entered data matches the data requirements. The unit tests show passing, which gives me confidence that the validation scripts will check for data length, password, and email criteria.
+There were several courses that I was able to fall back on to assist in the completion of the different pieces of the project. For the **Software Design and Engineering category**, the enhancement design included building a set of blueprints outlining the typical communications needed in a software development project. These documents include [user stories](docs/UseCases), [workflow, and flowchart diagrams](docs/WorkflowDiagram), and are helpful when **collaborating with a team** that includes Project Managers, Developers, Business Analysts, and Architects. Additionally, I wrote instructions on how to [view the mobile app without an emulator](docs/ExtensionInstructions) and documented some [before and after screenshots](docs/Screenshots). The Software Development Lifecycle course taught me the importance of completing development steps in accordance with industry standards. For example, I used GIT Bash source control with my GitHub repository to record commits along the project. This is a great resource to review changes made to the code at different points of the project. [Click here](https://github.com/sourkrouse/ePortfolio/commits/master/WeightTracker) to review the history of commits made in the project stored in GitHub. The Software Test, Automation and QA course helped in the design of some unit tests I built to test the validation functions I wrote to ensure the entered data matches the data requirements. The unit tests show passing, which gives me confidence that the validation scripts will check for data length, password, and email criteria.
 ![Screenshot of Unit Test Result 1](docs/assets/UnitTestResult1.PNG)
 ![Screenshot of Unit Test Result 2](docs/assets/UnitTestResult2.PNG)
 
