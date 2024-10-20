@@ -11,11 +11,24 @@ SNHU Capstone Project: CS499-12473-M01
 
 10/20/2024
 
+# Section Links
+- [Professional Assessment](#professional-assessment)
+    - [Project Summary](#project-summary)
+    - [Weight and See Mobile Application Summary](#weight-and-see-mobile-application-summary)
+- [Enhancement Narratives](#enhancement-narratives)
+    - [Artifact Selection](#artifact-selection)
+    - [Reason for Artifact Selection](#reason-for-artifact-selection)
+    - [Course Outcome Analysis](#course-outcome-analysis)
+    - [Enhancement Process Reflection](#enhancement-process-reflection)
+        - [Category One: Software Design & Engineering](#category-one-software-design--engineering)
+        - [Category Two: Algorithms and Data Sets](#category-two-algorithms-and-data-sets)
+        - [Category Three: Databases](#category-three-databases)
+
 # Professional Assessment
 ### Project Summary
 The Capstone course of the B.S. in Computer Science degree plan has been a fantastic way to pull together all the skills I have learned throughout the program journey. This journey started for me in early 2014 as I have been blessed to take advantage of the tuition assistance benefits at Truist Bank, where I have been employed since 2001. For this final project, I chose to enhance a mobile application I built in the CS 360: Mobile Architecture and Programming course for all three categories of the course. The application was built using the Android Studio as the IDE and the languages used are java and XML. There are two reasons behind this selection; because I find mobile development interesting and because it closely aligns with my current position and skills. Click the [Summary of the Enhancements](docs/Enhancement) in my online ePortfolio site on GitHub for a list of enhancements completed in the application. The setup of the ePortfolio is organized in a way that **communications to stakeholders** are housed in a unique location. The home page documents the skills and process used in the project and the sidebar includes links to supporting information.
 
-There were several courses that I was able to fall back on to assist in the completion of the different pieces of the project. For the **Software Design and Engineering category**, the enhancement design included building a set of blueprints outlining the typical communications needed in a software development project. These documents include [user stories](docs/UseCases.md), [workflow, and flowchart diagrams](docs/WorkflowDiagram.md), and are helpful when **collaborating with a team** that includes Project Managers, Developers, Business Analysts, and Architects. Additionally, I wrote instructions on how to [view the mobile app without an emulator](docs/ExtensionInstructions.md) and documented some [before and after screenshots](docs/Screenshots.md). The Software Development Lifecycle course taught me the importance of completing development steps in accordance with industry standards. For example, I used GIT Bash source control with my GitHub repository to record commits along the project. This is a great resource to review changes made to the code at different points of the project. Click here to review the history of commits made in the project stored in GitHub. The Software Test, Automation and QA course helped in the design of some unit tests I built to test the validation functions I wrote to ensure the entered data matches the data requirements. The unit tests show passing, which gives me confidence that the validation scripts will check for data length, password, and email criteria.
+There were several courses that I was able to fall back on to assist in the completion of the different pieces of the project. For the **Software Design and Engineering category**, the enhancement design included building a set of blueprints outlining the typical communications needed in a software development project. These documents include [user stories](docs/UseCases), [workflow, and flowchart diagrams](docs/WorkflowDiagram), and are helpful when **collaborating with a team** that includes Project Managers, Developers, Business Analysts, and Architects. Additionally, I wrote instructions on how to [view the mobile app without an emulator](docs/ExtensionInstructions) and documented some [before and after screenshots](docs/Screenshots). The Software Development Lifecycle course taught me the importance of completing development steps in accordance with industry standards. For example, I used GIT Bash source control with my GitHub repository to record commits along the project. This is a great resource to review changes made to the code at different points of the project. Click here to review the history of commits made in the project stored in GitHub. The Software Test, Automation and QA course helped in the design of some unit tests I built to test the validation functions I wrote to ensure the entered data matches the data requirements. The unit tests show passing, which gives me confidence that the validation scripts will check for data length, password, and email criteria.
 ![Screenshot of Unit Test Result 1](docs/assets/UnitTestResult1.PNG)
 ![Screenshot of Unit Test Result 2](docs/assets/UnitTestResult2.PNG)
 
@@ -23,82 +36,85 @@ For the **Algorithm and Data Structure category**, there was a bit of a learning
 
 For the **Database category**, I used a Room Library database that uses internal storage and a SQL-Lite schema. I have several years of experience with SQL database queries and scripting, so I felt confident in showcasing some knowledge with relational databases. The original enhancement plan may have been too aggressive for the time requirements, so I downgraded to a simple two-table format with a foreign key in the weights table mapped back to the primary key in the registration table. This removed some opportunities to utilize more complex SQL query keywords like “distinct” or “group by”. The weight progress list does limit the results to 5 records and there is a button to toggle between ascending or descending order. 
 
+### Weight and See Mobile Application Summary
+I chose the same artifact across all three categories, using this mobile application to produce a fully polished, quality product. Developing in Android Studio and using Java code, with an XML front end, it is remarkably similar to the ASP.NET/C# with HTML front end applications I build in my daily role. The application includes a login/registration module, an option to add a new weight to your profile, and a display of the last 5 weights entered in a dashboard. Although there were several challenges throughout the project, the biggest challenge was being mindful of each potential interaction the user could have with each screen, including device orientation. A mobile application includes a manifest file that maps out each step of the workflow and will only allow those steps to be configured in the application. Therefore, a user can only go from the login page to the weight dashboard if the manifest file decrees it. One key difference between a mobile application and a static HTML application is that each time the device is re-oriented, or a new method is introduced into the workflow, the activities “OnCreate” method is automatically run to generate the new view. This means that the app can quickly crash if certain tasks are not separated by execute threads or callable threads. In the code example below, the RunOnThread is an object created in the Main Activity but uses the ExecutorService function to run the database call which pulls the user profile ID into a variable. It returns the profile ID of the user.
+
 '''
 
-package com.zybooks.weighttracker.ui.login;
-
-import com.zybooks.weighttracker.data.DAO.RegisterDao;
-import com.zybooks.weighttracker.data.InitDb;
-import com.zybooks.weighttracker.data.model.Register;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.Callable;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Future;
-
-/**
- * Separate class object to run an executor function with Callable() so that the DB Query can be called
- * and a user ID can be returned to the repository object. The Callable function allows a return
- * and username/password variables are set with a constructor.
- *
- * Last updated 10/16/2024, by Laura Brooks
- *
- *
- */
-public class RunOnThread {
-
-    private final ExecutorService executorService = Executors.newSingleThreadExecutor();
-    private List<Register> foundUserList = new ArrayList<>();
-    private RegisterDao registerDao = InitDb.appDatabase.registerDao();
-    private String username;
-    private String password;
-    private volatile int currentUserID = -1;
-
-    // constructor sets the user/pwd variables
-    public RunOnThread(String username, String password){
-            this.username = username;
-            this.password = password;
-
-    }
-
-    // runs the ExecutorFunction object in a Callable function on a different thread
-    // a separate thread is necessary so the app is not forced closed if there is a DB error.
-    public void getUserId() {
-        // using a Future object to call the DB Query in executor
-        Future<Integer> result = executorService.submit(new Callable<Integer>() {
-            // Callable requires the call() function
-            public Integer call() throws Exception {
-                // the other thread - running DB Query, get user ID for return
-                foundUserList = registerDao.getUserList(username, password);
-
-                if(foundUserList.size() != 1){
-                    // more than 1 user found with same username and password
-                    return -1;
-                } else {
-                    // one user found, return ID
-                    return foundUserList.get(0).getId();
+    package com.zybooks.weighttracker.ui.login;
+    
+    import com.zybooks.weighttracker.data.DAO.RegisterDao;
+    import com.zybooks.weighttracker.data.InitDb;
+    import com.zybooks.weighttracker.data.model.Register;
+    import java.util.ArrayList;
+    import java.util.List;
+    import java.util.concurrent.Callable;
+    import java.util.concurrent.ExecutorService;
+    import java.util.concurrent.Executors;
+    import java.util.concurrent.Future;
+    
+    /**
+     * Separate class object to run an executor function with Callable() so that the DB Query can be called
+     * and a user ID can be returned to the repository object. The Callable function allows a return
+     * and username/password variables are set with a constructor.
+     *
+     * Last updated 10/16/2024, by Laura Brooks
+     *
+     *
+     */
+    public class RunOnThread {
+    
+        private final ExecutorService executorService = Executors.newSingleThreadExecutor();
+        private List<Register> foundUserList = new ArrayList<>();
+        private RegisterDao registerDao = InitDb.appDatabase.registerDao();
+        private String username;
+        private String password;
+        private volatile int currentUserID = -1;
+    
+        // constructor sets the user/pwd variables
+        public RunOnThread(String username, String password){
+                this.username = username;
+                this.password = password;
+    
+        }
+    
+        // runs the ExecutorFunction object in a Callable function on a different thread
+        // a separate thread is necessary so the app is not forced closed if there is a DB error.
+        public void getUserId() {
+            // using a Future object to call the DB Query in executor
+            Future<Integer> result = executorService.submit(new Callable<Integer>() {
+                // Callable requires the call() function
+                public Integer call() throws Exception {
+                    // the other thread - running DB Query, get user ID for return
+                    foundUserList = registerDao.getUserList(username, password);
+    
+                    if(foundUserList.size() != 1){
+                        // more than 1 user found with same username and password
+                        return -1;
+                    } else {
+                        // one user found, return ID
+                        return foundUserList.get(0).getId();
+                    }
+    
                 }
-
+            });
+            // try/catch to get the result from the Future object or the exception
+            try {
+                currentUserID = result.get();
+            } catch (Exception e) {
+                // failed
+                currentUserID = -1;
             }
-        });
-        // try/catch to get the result from the Future object or the exception
-        try {
-            currentUserID = result.get();
-        } catch (Exception e) {
-            // failed
-            currentUserID = -1;
+            executorService.shutdown(); // shutdown executor once complete
         }
-        executorService.shutdown(); // shutdown executor once complete
+    
+            // getter method for main activity
+            public int getUser() {
+                getUserId();
+                return currentUserID;
+            }
+    
     }
-
-        // getter method for main activity
-        public int getUser() {
-            getUserId();
-            return currentUserID;
-        }
-
-}
 
 '''
 
@@ -109,9 +125,6 @@ Utilizing all the available resources for troubleshooting is an important qualit
 
 Building this project helped to solidify my career goal decision in software development or engineering. I enjoyed learning the fundamentals of a mobile application and hope to apply those skills in my current and future positions. 
 
-
-### Weight and See Mobile Application Summary
-I chose the same artifact across all three categories, using this mobile application to produce a fully polished, quality product. Developing in Android Studio and using Java code, with an XML front end, it is remarkably similar to the ASP.NET/C# with HTML front end applications I build in my daily role. The application includes a login/registration module, an option to add a new weight to your profile, and a display of the last 5 weights entered in a dashboard. Although there were several challenges throughout the project, the biggest challenge was being mindful of each potential interaction the user could have with each screen, including device orientation. A mobile application includes a manifest file that maps out each step of the workflow and will only allow those steps to be configured in the application. Therefore, a user can only go from the login page to the weight dashboard if the manifest file decrees it. One key difference between a mobile application and a static HTML application is that each time the device is re-oriented, or a new method is introduced into the workflow, the activities “OnCreate” method is automatically run to generate the new view. This means that the app can quickly crash if certain tasks are not separated by execute threads or callable threads. In the code example below, the RunOnThread is an object created in the Main Activity but uses the ExecutorService function to run the database call which pulls the user profile ID into a variable. It returns the profile ID of the user.
 
 # Enahancement Narratives
 ### Artifact Description
