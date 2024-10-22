@@ -146,7 +146,7 @@ Building this project helped to solidify my career goal decision in software dev
 
 [[Back to Top]](#section-links)
 
-# Enahancement Narratives
+# Enhancement Narratives
 ### Artifact Description
 
 The artifact chosen for this project is a mobile application titled Weight and See, which was first developed in the CS 360: Mobile Architecture and Programming course. The artifact will be used for all three categories. The course was originally completed in Feb/Mar 2022 and included an initial design as well as some placeholders for extended functionality. The application was built using the Android Studio as the IDE and the languages used are java and XML. The application includes functionality to login or create an account, then displays a list of weights by date that have been entered to show progress towards a goal weight. The app uses the Room Library which functions as an Internal database utilizing SQLite. Although these enhancements will focus on the basic shell and database CRUD methods, the application was built with the intention to expand that functionality in later phases.
